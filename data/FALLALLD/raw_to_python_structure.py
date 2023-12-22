@@ -13,9 +13,9 @@ os.chdir(FP)
 
 FileNamesAll = os.listdir(FP)
 FileNames = []
-for f_name in FileNamesAll:
-    if f_name.endswith('_A.dat'):
-        FileNames.append(f_name)
+for F_NAME in FileNamesAll:
+    if F_NAME.endswith('_A.dat'):
+        FileNames.append(F_NAME)
 LL = len(FileNames)
 
 l_SubjectID = []
@@ -28,33 +28,33 @@ l_Bar = []
 l_Fall = []
 
 for i in range(LL):
-    f_name = FileNames[i]
-    SubjectID = int(f_name[1:3])
+    F_NAME = FileNames[i]
+    SubjectID = int(F_NAME[1:3])
     l_SubjectID.append(np.uint8(SubjectID))
-    ActivityID = int(f_name[8:11])
+    ActivityID = int(F_NAME[8:11])
     l_ActivityID.append(np.uint8(ActivityID))
     if ActivityID > 100:
         l_Fall.append(np.uint8(1))
     else:
         l_Fall.append(np.uint8(0))
-    TrialNo = int(f_name[13:15])
+    TrialNo = int(F_NAME[13:15])
     l_TrialNo.append(np.uint8(TrialNo))
-    if int(f_name[5]) != 2:  # if only device on wrist
+    if int(F_NAME[5]) != 2:  # if only device on wrist
         continue
 
-    l_Acc.append(np.int16(genfromtxt(f_name, delimiter=',')))
-    chArr = list(f_name)
+    l_Acc.append(np.int16(genfromtxt(F_NAME, delimiter=',')))
+    chArr = list(F_NAME)
     chArr[16] = 'G'
-    f_name = "".join(chArr)
-    l_Gyr.append(np.int16(genfromtxt(f_name, delimiter=',')))
-    chArr = list(f_name)
+    F_NAME = "".join(chArr)
+    l_Gyr.append(np.int16(genfromtxt(F_NAME, delimiter=',')))
+    chArr = list(F_NAME)
     chArr[16] = 'M'
-    f_name = "".join(chArr)
-    l_Mag.append(np.int16(genfromtxt(f_name, delimiter=',')))
-    chArr = list(f_name)
+    F_NAME = "".join(chArr)
+    l_Mag.append(np.int16(genfromtxt(F_NAME, delimiter=',')))
+    chArr = list(F_NAME)
     chArr[16] = 'B'
-    f_name = "".join(chArr)
-    l_Bar.append(genfromtxt(f_name, delimiter=','))
+    F_NAME = "".join(chArr)
+    l_Bar.append(genfromtxt(F_NAME, delimiter=','))
     print(f'File  {i+1}  out of {len(FileNames)}')
 os.chdir(oldDir)
 
