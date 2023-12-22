@@ -1,4 +1,9 @@
 # ALERT (Algorithm for Learning and Evaluation of Risks in Tumbles)
+[![Python Package unittest](https://github.com/krittin-kulrat/ALERT/actions/workflows/unittest.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/unittest.yml)
+
+[![Python Package pylint](https://github.com/krittin-kulrat/ALERT/actions/workflows/pylint.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/pylint.yml)
+
+[![Python Package flake8](https://github.com/krittin-kulrat/ALERT/actions/workflows/flake8.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/flake8.yml)
 ## Overview
 ALERT is an innovative machine learning initiative focused on advancing fall detection capabilities within smart wearable technologies. Its primary mission is to develop a highly accurate, real-time fall detection model, adaptable to various smartwatch platforms.
 ## Objective
