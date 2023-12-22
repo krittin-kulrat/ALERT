@@ -1,0 +1,8 @@
+name: alert
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy=1.26.2
+  - pandas=2.1.4
+prefix: C:\Users\kritt\anaconda3\envs\alert
