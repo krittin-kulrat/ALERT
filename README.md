@@ -1,16 +1,25 @@
-# ALERT
+# ALERT (Algorithm for Learning and Evaluation of Risks in Tumbles)
 ## Overview
-Algorithm for Learning and Evaluation of Risks in Tumbles (ALERT) is an advanced machine learning project focused on revolutionizing fall detection through smart wearable technologies. It aims to bridge the gap between sophisticated fall detection algorithms and everyday usability in devices like Garmin and Fitbit watches.
+ALERT is an innovative machine learning initiative focused on advancing fall detection capabilities within smart wearable technologies. Its primary mission is to develop a highly accurate, real-time fall detection model, adaptable to various smartwatch platforms.
 ## Objective
-To develop and deploy a highly accurate machine learning model capable of real-time fall detection. The model, initially trained using Python with rich public datasets, will be converted to JavaScript format (.js) for seamless integration with popular smartwatch applications.
+To create a machine learning model, trained using Python on diverse public datasets, and convert it to a format suitable for implementation in different smartwatch environments. The project emphasizes the development and provision of a versatile model, rather than specific app development for each smartwatch brand.
 ## Key Features
-1. **Innovative Model Conversion**: Transitioning from Python-based machine learning models to JavaScript, enabling compatibility with smartwatch platforms.
-2. **Smartwatch Integration**: Tailoring the algorithm for use in Garmin, Fitbit, and other popular smartwatch applications, maximizing reach and usability.
-3. **Data-Driven Accuracy**: Employing public fall datasets for training, ensuring the model's effectiveness across diverse scenarios.
-4. Real-Time Detection: Focusing on real-time analysis to provide immediate alerts and assistance in the event of a fall.
+1. **Cross-Platform Model Design**: Training a model versatile enough to be adapted to various smartwatch conventions and implementations.
+2. **Smartwatch Agnostic**: The repository focuses on the training aspect and provides the model file, serving as a foundation for further implementation in different smartwatch ecosystems.
+3. **Data-Driven Approach**: Leveraging public fall datasets for comprehensive and accurate model training.
+4. **Real-Time Detection**: Ensuring the model is capable of real-time analysis for immediate fall detection.
+5. **Open Source Collaboration**: Encouraging collaboration and contributions, fostering a community-driven approach to enhance and refine the model.
 ## Impact
-ALERT is poised to significantly enhance the safety and well-being of users, particularly the elderly and those at high risk of falls. By integrating sophisticated fall detection into widely-used wearable devices, ALERT brings peace of mind to users and their caregivers.
+By providing a robust, adaptable model, ALERT aims to contribute significantly to the enhancement of user safety across various smartwatch platforms. The project's core model can be a crucial tool in developing applications that aid in immediate fall detection and timely assistance, especially for the elderly and high-risk individuals.
 ## Technologies Used:
 - **Training**: Python, Data Analysis Libraries (e.g., Pandas, Scikit-learn)
-- **Deployment**: JavaScript, Smartwatch Development Kits
-- **Machine Learning**: Neural Network or Random Forest
+- **Deployment**: Model conversion tools for JavaScript compatibility (e.g., ONNX, ONNX.js)
+- **Machine Learning**: Random Forest (and potentially Neural Networks for larger datasets)
+## Future Scope
+ALERT envisions extending its impact by refining the model for greater accuracy, exploring integration with broader health monitoring systems, and adapting to emerging wearable technologies.
+## Dataset Acknowledgements
+### ARCO Fall Detection Dataset
+We express our gratitude to the ARCO Research Group for their invaluable contribution to the field of fall detection. Their dedication to making this dataset publicly accessible greatly aids in advancing research and development in this domain.
+
+For more details about the ARCO Fall Detection Dataset, visit their website: [ARCO Fall Detection Dataset](https://arcoresearch.com/2021/04/16/dataset-for-fall-detection/).
+
