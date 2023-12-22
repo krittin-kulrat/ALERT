@@ -28,3 +28,8 @@ We are grateful to the team behind the FALLALLD dataset for their efforts in com
 
 For further details about the FALLALLD dataset, please visit the IEEE DataPort website: [FALLALLD: Comprehensive Dataset of Human Falls and Activities of Daily Living](https://ieee-dataport.org/open-access/fallalld-comprehensive-dataset-human-falls-and-activities-daily-living).
 
+### UMAFall
+We extend our sincere thanks to the team responsible for the UMAFall dataset. Their dedication to compiling this dataset and making it publicly available greatly contributes to the advancements in the field of fall detection and prevention.
+
+For more information and to access the UMAFall dataset, please visit the following link: [UMAFall Dataset on Figshare](https://figshare.com/articles/dataset/UMA_ADL_FALL_Dataset_zip/4214283?file=11826395).
+
