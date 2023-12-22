@@ -23,3 +23,8 @@ We express our gratitude to the ARCO Research Group for their invaluable contrib
 
 For more details about the ARCO Fall Detection Dataset, visit their website: [ARCO Fall Detection Dataset](https://arcoresearch.com/2021/04/16/dataset-for-fall-detection/).
 
+### FALLALLD Dataset
+We are grateful to the team behind the FALLALLD dataset for their efforts in compiling and sharing this valuable resource. Their commitment to advancing research in human activity recognition and fall detection is deeply appreciated.
+
+For further details about the FALLALLD dataset, please visit the IEEE DataPort website: [FALLALLD: Comprehensive Dataset of Human Falls and Activities of Daily Living](https://ieee-dataport.org/open-access/fallalld-comprehensive-dataset-human-falls-and-activities-daily-living).
+
