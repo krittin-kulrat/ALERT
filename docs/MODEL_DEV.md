@@ -9,6 +9,8 @@ over individual models.
 
 ## Data Division Strategy
 
+![data diagram](data_diagram.png)
+
 Each dataset used in the ALERT project will be divided into four distinct
 sections, serving different purposes in the model development process:
 
