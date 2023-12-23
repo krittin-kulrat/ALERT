@@ -1,0 +1,40 @@
+name: Markdown lint
+
+on: 
+    push: 
+      branches:
+        - main
+    pull_request:
+    workflow_dispatch:
+      inputs:
+        loglevel:
+          description: 'Log level'
+          required: true
+          default: 'warning'
+          type: choice
+          options:
+          - info
+          - warning
+          - debug
+        tags:
+          description: 'Test scenario tags'
+          required: false
+          type: boolean
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: tj-actions/changed-files@v40
+      id: changed-files
+      with:
+        files: '**/*.md'
+        separator: ","
+    - uses: DavidAnson/markdownlint-cli2-action@v14
+      if: steps.changed-files.outputs.any_changed == 'true'
+      with:
+        globs: ${{ steps.changed-files.outputs.all_changed_files }}
+        separator: ","
