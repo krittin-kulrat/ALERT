@@ -1,10 +1,10 @@
 # ALERT (Algorithm for Learning and Evaluation of Risks in Tumbles)
 
 [![Python Package unittest](https://github.com/krittin-kulrat/ALERT/actions/workflows/unittest.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/unittest.yml)
-
 [![Python Package pylint](https://github.com/krittin-kulrat/ALERT/actions/workflows/pylint.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/pylint.yml)
-
 [![Python Package flake8](https://github.com/krittin-kulrat/ALERT/actions/workflows/flake8.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/flake8.yml)
+[![Markdown lint](https://github.com/krittin-kulrat/ALERT/actions/workflows/mdlint.yml/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/mdlint.yml)
+[![CodeQL](https://github.com/krittin-kulrat/ALERT/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/krittin-kulrat/ALERT/actions/workflows/github-code-scanning/codeql)
 
 ## Overview
 
