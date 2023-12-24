@@ -1,44 +1,78 @@
 # Data Preprocessing Guidelines
 
-In the ALERT project, preprocessing data from various sources is a critical step
-to ensure uniformity and reliability in our analysis. Given the diversity in
-dataset configurations and device coordinate systems, we establish a standard
-preprocessing procedure.
+In the ALERT project, effective data preprocessing is vital for accurately
+analyzing accelerometer data. We are focusing on the magnitude of acceleration,
+which simplifies the preprocessing by eliminating the need for standardizing the
+coordinate system.
 
-## Standardizing Coordinate System
+## Processing Accelerometer Data
 
-| ![Fitbit's accelerometer axis](https://dev.fitbit.com/images/guides/sensors/accelerometer-axis-cded279fb55c403a375d7a429a2ef1ea.jpg)|
-| :--: |
-| *[Fitbit's accelerometer axis](https://dev.fitbit.com/build/guides/sensors/accelerometer/)* |
+- **Objective**: To process and analyze accelerometer data uniformly across
+various datasets.
+- **Magnitude Calculation**: The following equation will be used to calculate
+the magnitude of acceleration. If the the watch lays flat, the magnitude should
+equal to 9.8
 
-- **Objective**: Align the data to a common coordinate system, consistent with
-popular smartwatch standards like Fitbit and Garmin.
-- **Coordinate System Specification**:
-  - **X-Axis**: Parallel with the device’s screen, aligned with the top and bottom
-  edges, extending in the left-right direction.
-  - **Y-Axis**: Parallel with the device’s screen, aligned with the left and right
-  edges, extending in the top-bottom direction.
-  - **Z-Axis**: Perpendicular to the device’s screen, pointing upwards.
+$$
+|A| = \sqrt{A_x^2+A_y^2+A_z^2}
+$$
 
-## Implementing Coordinate Standardization
+## Statistical Feature Extraction
 
-- **Transforming Data**: For each dataset, transform the accelerometer data to align
-with this specified coordinate system.
-- **Uniformity Check**: Ensure that post-transformation, the data from all sources
-adhere to this standardized orientation.
-- **Documentation**: Clearly document the transformation process for each dataset,
-including any assumptions or specific steps taken.
+1. **Maximum Peak**: The highest acceleration magnitude recorded, reflecting the
+intensity of a movement or a fall.
 
-## Initial Focus on Accelerometer Data
+2. **Range Pre-Peak**: The difference in acceleration magnitude before the
+peak - from the lowest to the highest.
 
-- **Current Scope**: We are initially utilizing only accelerometer data to
-establish the proof of concept.
-- **Data Selection**: Carefully select and preprocess accelerometer data from
-each dataset to align with our standard coordinate system.
+3. **Range Post-Peak**: The difference in acceleration magnitude after the
+peak - from the lowest to the highest.
 
-## Future Integration of Gyroscope Data
+4. **Time Pre-Peak**: The time interval between the lowest and highest
+acceleration magnitude before the peak.
 
-- **Expansion Plan**: In the future, we intend to incorporate gyroscope data to
-enhance our model’s capabilities.
-- **Preprocessing Gyroscope Data**: Similar standardization procedures will be
-developed for gyroscope data, ensuring consistency across all types of sensor data.
+5. **Time Post-Peak**: The time interval between the lowest and highest
+acceleration magnitude after the peak.
+
+6. **Mean Acceleration**: The average value of acceleration magnitude over a
+defined time window.
+
+7. **Median Acceleration**: The median value of acceleration magnitude,
+indicating central tendency.
+
+8. **Standard Deviation**: A measure of the variability in acceleration magnitude.
+
+9. **Variance**: The square of the standard deviation, reflecting the spread in
+acceleration data.
+
+10. **Skewness**: A measure of the asymmetry of the acceleration distribution.
+
+11. **Kurtosis**: Indicates the 'tailedness' of the acceleration distribution,
+capturing extreme movements.
+
+## Implementation Notes
+
+- **Feature Calculation**: Calculate these statistical features for each
+relevant segment of the accelerometer data.
+- **Documentation**: Clearly document the feature extraction process for each
+dataset for consistency and reproducibility.
+
+## Future Plans
+
+- As the project progresses, we may incorporate additional sensor data and
+expand our statistical analysis.
+- These preprocessing guidelines will be updated to accommodate such enhancements.
+
+## Importance of Preprocessing
+
+- Accurate preprocessing is essential for capturing the nuances of movement
+patterns that are characteristic of falls.
+- The selected statistical features are designed to provide a comprehensive
+understanding of these patterns.
+
+## Conclusion
+
+- Following these preprocessing guidelines ensures that our dataset is processed
+uniformly, making it suitable for analysis and model training.
+- This approach is fundamental to the success of our machine learning models in
+the ALERT project.
